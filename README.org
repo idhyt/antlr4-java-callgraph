@@ -1,0 +1,16 @@
+基于 [[https://github.com/antlr/antlr4.git][ANTLR]] 的 Java 语法解析器, 用于解析 Java 语法树并生成 Callgraph
+
+python 运行时依赖: antlr4-python3-runtime
+
+#+begin_src shell
+❯ python process.py -i ./testcase
+2023-42-15 19:42:37 __main__ | INFO | [5/5] create java callgraph success for testcase/InterpreterTreeTextProvider.java
+2023-42-15 19:42:38 __main__ | INFO | [3/5] create java callgraph success for testcase/FailedPredicateException.java
+2023-42-15 19:42:38 __main__ | INFO | [1/5] create java callgraph success for testcase/ANTLRInputStream.java
+2023-42-15 19:42:39 __main__ | INFO | [4/5] create java callgraph success for testcase/Lexer.java
+2023-42-15 19:42:39 __main__ | INFO | [2/5] create java callgraph success for testcase/ATNDescriber.java
+#+end_src
+
+vscode 请使用 *Graphviz Interactive Preview* 插件来查看生成的dot文件
+
+[[./callgraph.jpg]]
